@@ -307,7 +307,7 @@ void InternalLightManager::gpu_update_source(ShadowSource* source) {
 void InternalLightManager::update_lights() {
     for (auto iter = _lights.begin(); iter != _lights.end(); ++iter) {
         RPLight* light = *iter;
-        if (light && light->get_needs_update()) {
+        if (light /*&& light->get_needs_update()*/) {
             if (light->get_casts_shadows()) {
                 light->update_shadow_sources();
             }

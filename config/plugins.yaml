@@ -5,20 +5,20 @@
 
 enabled:
     - ao
-    - bloom
-    - color_correction
-    - forward_shading
-    - motion_blur
+    - env_probes
     - pssm
     - scattering
-    - skin_shading
-    - sky_ao
-    - smaa
-    - ssr
+    # - bloom
     # - clouds
+    # - color_correction
     # - dof
-    - env_probes
+    # - forward_shading
     # - fxaa
+    # - motion_blur
+    # - skin_shading
+    # - sky_ao
+    # - smaa
+    # - ssr
     # - volumetrics
     # - vxgi
 
@@ -116,11 +116,11 @@ overrides:
         num_samples: 12
 
     pssm:
-        max_distance: 50.0
+        max_distance: 1528.76
         logarithmic_factor: 3.0
-        sun_distance: 100.0
+        sun_distance: 1110.2
         split_count: 4
-        resolution: 1024
+        resolution: 4096
         border_bias: 0.058
         use_pcf: True
         filter_sequence: halton_2D_32
