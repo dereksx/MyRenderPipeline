@@ -71,8 +71,6 @@ class RPLight : public ReferenceCount {
         inline void remove_slot();
         inline void assign_slot(int slot);
 
-        inline void invalidate_shadows();
-
     PUBLISHED:
 
         inline void set_pos(const LVecBase3f &pos);
@@ -112,6 +110,8 @@ class RPLight : public ReferenceCount {
         inline void set_near_plane(float near_plane);
         inline float get_near_plane() const;
         MAKE_PROPERTY(near_plane, get_near_plane, set_near_plane);
+
+        inline void invalidate_shadows();
 
     protected:
 
