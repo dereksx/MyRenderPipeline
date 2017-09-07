@@ -63,9 +63,6 @@ class RPLight : public ReferenceCount {
         inline ShadowSource* get_shadow_source(size_t index) const;
         inline void clear_shadow_sources();
 
-        inline void set_needs_update(bool flag);
-        inline bool get_needs_update() const;
-
         inline bool has_slot() const;
         inline int get_slot() const;
         inline void remove_slot();
@@ -110,6 +107,9 @@ class RPLight : public ReferenceCount {
         inline void set_near_plane(float near_plane);
         inline float get_near_plane() const;
         MAKE_PROPERTY(near_plane, get_near_plane, set_near_plane);
+
+        inline void set_needs_update(bool flag);
+        inline bool get_needs_update() const;
 
         inline void invalidate_shadows();
 
